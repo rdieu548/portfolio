@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Rémi DIEU - Développeur Web">
+    <title>Portfolio - Rémi DIEU</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .card img {
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+            margin: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#accueil" onclick="showSection('accueil', event)">Mon Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#accueil" onclick="showSection('accueil', event)">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projets" onclick="showSection('projets', event)">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" onclick="showSection('contact', event)">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container mt-4">
+        <!-- Section Accueil -->
+        <div id="accueil" class="section active">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="pfp.png" class="img-fluid rounded-start" alt="Photo de profil">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">Rémi DIEU</h2>
+                            <h4 class="card-subtitle mb-2 text-muted">Étudiant en Licence Professionnelle</h4>
+                            <p class="card-text">
+                                Développeur full-stack passionné, je maîtrise principalement PHP, ainsi que Python et Java.
+                                Curieux et polyvalent, je m'adapte rapidement aux nouvelles technologies. 
+                                À la recherche d'un stage du 17 mars 2025 au 20 juin 2025, je souhaite contribuer à des projets concrets et développer mes compétences.
+                            </p>
+                            
+                            <!-- Bouton lettre de motivation -->
+                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#lettreMotivation">
+                                Voir ma lettre de motivation
+                            </button>
+
+                            <!-- Navigation par onglets -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#experience">Expérience</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#formation">Formation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#competences">Compétences</a>
+                                </li>
+                            </ul>
+
+                            <!-- Contenu des onglets -->
+                            <div class="tab-content mt-3">
+                                <!-- Expérience -->
+                                <div class="tab-pane fade show active" id="experience">
+                                    <!-- Expérience -->
+                                    <h5 class="mt-3">Expérience Professionnelle</h5>
+                                    <div class="list-group">
+                                        <div class="list-group-item">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">Alternance - Apprenti Technicien Informatique</h6>
+                                                <small>Juillet 2022 - Juillet 2024</small>
+                                            </div>
+                                            <p class="mb-1">Centre Pénitentiaire de Maubeuge</p>
+                                            <ul class="list-unstyled">
+                                                <li>• Développement HTML/CSS/PHP/MYSQL</li>
+                                                <li>• Gestion de tickets d'incidents</li>
+                                                <li>• Assistance informatique aux utilisateurs</li>
+                                                <li>• Administration Active Directory</li>
+                                                <li>• Gestion de parc informatique</li>
+                                            </ul>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">Stage scolaire - Technicien informatique</h6>
+                                                <small>Novembre 2020 - Décembre 2021</small>
+                                            </div>
+                                            <p class="mb-1">Mairie de Maubeuge</p>
+                                            <ul class="list-unstyled">
+                                                <li>• Développement d'un intranet HTML/CSS</li>
+                                                <li>• Masterisation de postes Windows 10</li>
+                                                <li>• Assistance informatique aux utilisateurs</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Formation -->
+                                <div class="tab-pane fade" id="formation">
+                                    <!-- Formation -->
+                                    <h5>Formation</h5>
+                                    <div class="list-group">
+                                        <div class="list-group-item">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">Licence professionnelle Métiers de l'informatique</h6>
+                                                <small>En cours | 2024 - 2025</small>
+                                            </div>
+                                            <p class="mb-1">Parcours Développement d'applications Web et Mobile</p>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">BTS Services Informatiques aux Organisations</h6>
+                                                <small>Admis | 2022 - 2024</small>
+                                            </div>
+                                            <p class="mb-1">Option Solutions Logicielles et Applications Métiers (SLAM)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Compétences -->
+                                <div class="tab-pane fade" id="competences">
+                                    <!-- Compétences -->
+                                    <p>
+                                        Développeur full-stack passionné, je maîtrise principalement PHP, ainsi que Python et Java.
+                                        Curieux et polyvalent, je m'adapte rapidement aux nouvelles technologies.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Projets -->
+        <div id="projets" class="section">
+            <h3 class="mb-4">Mes Projets</h3>
+            <div class="row">
+                <!-- Projet 2048 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="2048.png" class="card-img-top" alt="2048 Game Screenshot" style="height: 300px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="card-title">2048 Game - Flutter</h5>
+                            <p class="card-text">Un clone du célèbre jeu 2048 développé avec Flutter</p>
+                            <p class="card-text"><small class="text-muted">Technologies : Flutter, Dart</small></p>
+                            <a href="https://github.com/rdieu548/2048-flutter-game" target="_blank" class="btn btn-primary">
+                                <i class="bi bi-github"></i> Voir sur GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet Journal de Sommeil -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="cake.png" class="card-img-top" alt="Journal de Sommeil Screenshot" style="height: 300px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="card-title">Journal de Sommeil</h5>
+                            <p class="card-text">Application Web de suivi du sommeil développée avec CakePHP</p>
+                            <p class="card-text"><small class="text-muted">Technologies : CakePHP, MySQL, HTML/CSS</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Contact -->
+        <div id="contact" class="section">
+            <h3 class="mb-4">Contact</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><i class="bi bi-person-lines-fill"></i> Mes Coordonnées</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="bi bi-envelope"></i> 
+                                    <a href="mailto:remi.dieu@example.com" class="text-decoration-none">remi.dieu@example.com</a>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-telephone"></i> 
+                                    <a href="tel:+33600000000" class="text-decoration-none">06 XX XX XX XX</a>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-geo-alt"></i> 
+                                    Maubeuge, France
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-github"></i> 
+                                    <a href="https://github.com/rdieu548" target="_blank" class="text-decoration-none">Github/rdieu548</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pour la lettre de motivation -->
+    <div class="modal fade" id="lettreMotivation" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lettre de Motivation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Madame, Monsieur,</p>
+                    <p>
+                        Actuellement étudiant en Licence Professionnelle Métiers de l'informatique, 
+                        je suis à la recherche d'un stage du 17 mars 2025 au 20 juin 2025...
+                        <!-- Complétez avec votre lettre de motivation -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(sectionId, event) {
+            // Empêcher le comportement par défaut du lien
+            event.preventDefault();
+            
+            // Cacher toutes les sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Afficher la section demandée
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Mettre à jour la classe active dans la navigation
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === '#' + sectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Afficher la section accueil par défaut
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('accueil', new Event('click'));
+        });
+    </script>
+</body>
+</html> 
